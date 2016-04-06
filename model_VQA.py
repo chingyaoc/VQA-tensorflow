@@ -407,7 +407,7 @@ def train():
     tStop_total = time.time()
     print "Total Time Cost:", round(tStop_total - tStart_total,2), "s"
 
-def test(model_path='model2/model-300'):
+def test(model_path='model/model-300'):
     print 'loading dataset...'
     dataset, img_feature, test_data = get_data_test()
     num_test = test_data['question'].shape[0]
