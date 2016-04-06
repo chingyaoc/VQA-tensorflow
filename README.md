@@ -35,11 +35,19 @@ Here we use VGG_ILSVRC_19_layers [model](https://gist.github.com/ksimonyan/37851
 ### Training and Testing
 
 To train on the prepared dataset, comment out `test()`.
-To test, comment out `train()`.
-After choosing, we simply run the program with python.
+We simply run the program with python.
 
 ```
 $ python model_VQA.py
 ```
 
 with the default parameter, this will take several hours and will generate the model under `model`
+To test, comment out `train()` and run the same program, this will generate `data.json`
+We finally run a simple program to correct the generated json files.
+
+```
+$ python s2i.py
+```
+
+This will generate the result `file OpenEnded_mscoco_lstm_results.json`
+
