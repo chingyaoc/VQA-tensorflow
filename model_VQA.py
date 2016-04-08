@@ -220,7 +220,7 @@ decay_factor = 0.99997592083
 checkpoint_path = 'model/'
 
 # misc
-n_epochs = 300
+n_epochs = 225
 backend = 'cudnn'
 seed = '123'
 max_words_q = 26
@@ -407,7 +407,7 @@ def train():
     tStop_total = time.time()
     print "Total Time Cost:", round(tStop_total - tStart_total,2), "s"
 
-def test(model_path='model/model-300'):
+def test(model_path='model/model-225'):
     print 'loading dataset...'
     dataset, img_feature, test_data = get_data_test()
     num_test = test_data['question'].shape[0]
@@ -423,7 +423,7 @@ def test(model_path='model/model-300'):
             dim_hidden = dim_hidden,
             max_words_q = max_words_q,
             vocabulary_size = vocabulary_size,
-            drop_out_rate = 0.5)
+            drop_out_rate = 0)
 
     tf_answer, tf_image, tf_question, tf_question_length, tf_question_mask = model.build_generator()
 
@@ -494,7 +494,7 @@ def test(model_path='model/model-300'):
 
 if __name__ == '__main__':
     # commend test() when you train()
-    with tf.device('/gpu:'+str(1)):
+    with tf.device('/gpu:'+str(0)):
         train()
     test()
     
