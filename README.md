@@ -1,6 +1,6 @@
 # Tensorflow Edition of Deeper LSTM+ normalized CNN for Visual Question Answering
 
-Provide tensor flow edition for VQA_LSTM_CNN, training a deeper LSTM and normalized CNN Visual Question Answering model. This current code can get 49.49 on Open-Ended (use COCO train set to train and validation set to evaluation). You can check original torch edtion from [VQA_LSTM_CNN](https://github.com/VT-vision-lab/VQA_LSTM_CNN) for more details.
+Provide tensor flow edition for VQA_LSTM_CNN, training a deeper LSTM and normalized CNN Visual Question Answering model. The current code can reach 49.49 on Open-Ended (use COCO train set to train and validation set to evaluation). You can check original torch edtion from [VQA_LSTM_CNN](https://github.com/VT-vision-lab/VQA_LSTM_CNN) for more details.
 
 
 ### Requirements
