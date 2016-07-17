@@ -1,6 +1,6 @@
 # Tensorflow Edition of Deeper LSTM+ normalized CNN for Visual Question Answering
 
-Provide tensor flow edition for VQA_LSTM_CNN, training a deeper LSTM and normalized CNN Visual Question Answering model. The current code can reach 49.49 on Open-Ended (use COCO train set to train and validation set to evaluation). You can check original torch edtion from [VQA_LSTM_CNN](https://github.com/VT-vision-lab/VQA_LSTM_CNN) for more details.
+Provide tensor flow edition for VQA_LSTM_CNN, training a deeper LSTM and normalized CNN Visual Question Answering model. The current code can reach same accuracy with original torch code on Open-Ended (use COCO train set to train and validation set to evaluation). You can check original torch edtion from [VQA_LSTM_CNN](https://github.com/VT-vision-lab/VQA_LSTM_CNN) for more details.
 
 
 ### Requirements
@@ -41,7 +41,7 @@ We simply run the program with python.
 $ python model_VQA.py
 ```
 
-with the default parameter, this will take several hours and will generate the model under `model`
+with the default parameter, this will take several hours and will generate the model under `model_save`
 To test, comment out `train()` and run the same program, this will generate `data.json`
 We finally run a simple program to correct the generated json files.
 
@@ -49,5 +49,5 @@ We finally run a simple program to correct the generated json files.
 $ python s2i.py
 ```
 
-This will generate the result `OpenEnded_mscoco_lstm_results.json`
+This will generate the result `OpenEnded_mscoco_lstm_results.json`. To evaluate the accuracy of generate result, you need to download the [VQA evaluation tools](https://github.com/VT-vision-lab/VQA).
 
